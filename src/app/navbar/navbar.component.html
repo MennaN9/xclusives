@@ -1,0 +1,68 @@
+<div class="az-header sticky-top">
+  <div class="container-fluid">
+    <div class="az-header-left">
+      <a routerLink="/" class="az-logo"><span></span> <img
+          src="../../assets/img/logo_2c448879fece8b7f6463c6566ddcb9b8_1x (1).png" alt="" srcset=""></a>
+      <a href="#" id="azMenuShow" (click)="toggleHeaderMenu($event)"
+        class="az-header-menu-icon d-lg-none"><span></span></a>
+    </div><!-- az-header-left -->
+    <div class="az-header-menu">
+      <div class="az-header-menu-header">
+        <a routerLink="/" class="az-logo"><span></span> <img
+            src="../../assets/img/logo_2c448879fece8b7f6463c6566ddcb9b8_1x (1).png" alt="" srcset=""></a>
+        <a href="#" (click)="toggleHeaderMenu($event)" class="close">&times;</a>
+      </div><!-- az-header-menu-header -->
+      <ul class="nav d-flex align-items-center">
+        <li class="nav-item" ngbDropdown>
+          <a routerLink="/works" routerLinkActive="active" class="nav-link text-uppercase">
+            {{'navbar.how' |translate}}</a>
+        </li>
+        <!-- <li class="nav-item" ngbDropdown>
+          <a routerLink="/card" routerLinkActive="active" class="nav-link text-uppercase"
+            [ngClass]="('currentTheme' | translate ) === 'rtl' ? 'nav-item-p-rtl' : 'nav-item-p-ltr'">
+            {{'navbar.get the card' | translate}}</a>
+        </li> -->
+        <li class="nav-item" ngbDropdown>
+          <a routerLink="/alldeals" routerLinkActive="active" class="nav-link text-uppercase"
+            [ngClass]="('currentTheme' | translate ) === 'rtl' ? 'nav-item-p-rtl' : 'nav-item-p-ltr'">
+            {{'navbar.Monthly Deals' | translate}}</a>
+        </li>
+        <li class="nav-item" ngbDropdown>
+          <a routerLink="/flashdeals" routerLinkActive="active" class="nav-link text-uppercase">
+            {{'navbar.Flash Deals' |translate}}</a>
+        </li>
+        <li class="nav-item" ngbDropdown>
+          <a routerLink="/download" routerLinkActive="active" class="nav-link text-uppercase">
+            {{'navbar.Download the App' | translate}}</a>
+        </li>
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link with-sub text-uppercase" id="pagesDropdown" ngbDropdownToggle>
+            {{'navbar.contact us' |translate}}
+            <!-- <span class="material">
+              expand_more
+            </span> -->
+          </a>
+          <nav class="az-menu-sub" ngbDropdownMenu aria-labelledby="pagesDropdown">
+            <!-- <a routerLink="/general-pages/signin" class="nav-link">Sign In</a>
+            <a routerLink="/general-pages/signup" class="nav-link">Sign Up</a> -->
+            <a routerLink="/apply" class="a-dropdown">Apply for card</a>
+            <a routerLink="/career" class="a-dropdown">Career Join us</a>
+            <a routerLink="/merchant" class="a-dropdown">Merchant join us</a>
+            <a routerLink="/complaint" class="a-dropdown">Complaint</a>
+            <a routerLink="/blog" class="a-dropdown">Blog & Review</a>
+          </nav>
+        </li>
+        <li class="nav-item" ngbDropdown>
+          <a routerLink="/faq" routerLinkActive="active" class="nav-link text-uppercase">
+            {{'navbar.faq' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="setLang()" class="d-flex justify-content-start align-items-center"><img [src]="langImage"
+              class="nav-link text-uppercase" alt="" srcset="">{{'navbar.language' | translate}}</a>
+        </li>
+
+      </ul>
+    </div><!-- az-header-menu -->
+    <!-- az-header-right -->
+  </div><!-- container -->
+</div><!-- az-header -->
